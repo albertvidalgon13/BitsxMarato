@@ -9,9 +9,9 @@ export const SidebarData = [
         icon: <AiIcons.AiOutlineHome />,
     },
     {
-        title: 'Documents',
-        path: '/documents',
-        icon: <BsIcons.BsFiles/>,
+        title: 'FAQs',
+        path: '/faq',  // Puedes cambiar la ruta si es necesario
+        icon: <BsIcons.BsQuestionCircleFill />,
     },
     {
         title: 'Chat',

@@ -4,14 +4,18 @@ import Navbar from './components/Navbar';
 import DocumentsSection from './components/DocumentsSection';
 import DocumentPage from './components/DocumentPage';
 import ChatPage from './components/ChatPage';
+import MainContent from './components/MainContent'; // Importa el componente principal
+import FAQ from './components/Faqs';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Navbar />}>
+          <Route index element={<MainContent />} />
+          <Route path='faq' element={<FAQ />} />
           <Route path='documents' element={<DocumentsSection />} />
-          <Route path='documents/:name' element={<DocumentPage />}/>
+          <Route path='documents/:name' element={<ChatPage />}/>
           <Route path='chat' element={<ChatPage />} />
         </Route>
       </Routes>

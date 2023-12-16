@@ -1,12 +1,14 @@
 import React from "react";
 import { NavLink, Outlet } from 'react-router-dom';
 import { SidebarData } from "./SidebarData";
+import MainContent from './MainContent'; // Importa el componente principal
+
 
 function Navbar() {
     return (
         <>
             <nav className="nav-sidebar">
-                <h2 className="nav-title">OXFAM</h2>
+                <h2 className="nav-title">SexEd+</h2>
                 <hr className="nav-hr"></hr>
                 {SidebarData.map((item, index) => {
                     return (
@@ -20,6 +22,7 @@ function Navbar() {
             </nav>
             <main className="main-content">
                 <Outlet />
+            
             </main>
         </>
     );
