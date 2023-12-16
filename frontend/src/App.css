@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-family: 'Gabarito', cursive;
+  --background-color: rgb(233, 233, 233);
+  --font-color: black;
+  --side-color: #bdc3c7;
+  --nav-hr-color: lightgrey;
+  --documents-list-item-color: white;
+  --blue-color: rgb(0, 132, 255);
+  --nav-sidebar-width: 300px;
+  --nav-font-size: 1.2em;
+  --documents-header-element-height: 50px;
+  --chat-footer-element-height: 50px;
+  --rectuangular-border-radius: 5px;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --user-message-color: whitesmoke;
+  --computer-message-color: grey;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.nav-sidebar {
+  width: var(--nav-sidebar-width);
+  height: 100%;
+  font-size: var(--nav-font-size);
+  padding: 20px;
+}
+
+.nav-item {
+  list-style-type: none;
+}
+
+.nav-hr {
+  border: 0;
+  background-color: var(--nav-hr-color);
+  height: 2px;
+  margin-bottom: 10px;
+}
+
+.nav-title {
+  padding: 20px;
+}
+
+.nav-icon {
+  font-size: 1.5em;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.nav-icon > svg {
+  display: block;
+}
+
+.nav-link {
+  color: var(--font-color);
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: var(--rectuangular-border-radius);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-color:visited {
+  color: inherit;
+}
+
+.nav-link-active, .nav-link:hover {
+  background-color: var(--side-color);
+  color: var(--font-color);
+}
+
+
+.main-content {
+  flex: 1;
+  background-color: var(--background-color);
+  padding: 75px;
+  display: flex;
+  flex-direction: column;
+}
+
+.documents-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.documents-list {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.documents-list-item {
+  display: block;
+  height: 70px;
+  border-radius: var(--rectuangular-border-radius);
+  background-color: var(--documents-list-item-color);
+  margin-top: 20px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.documents-list-item-link {
+  flex: 1;
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.documents-list-item-link:hover {
+  color: var(--blue-color);
+}
+
+.documents-list-item-delete-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.documents-list-item-delete-button > svg{
+  display: block;
+  font-size: 1.75em;
+}
+
+.documents-list-item-delete-button > svg:hover{
+  color: red;
+}
+
+.documents-search-bar {
+  border: none;
+  width: 400px;
+  height: var(--documents-header-element-height);
+  border-radius: 50px;
+  background-color: var(--documents-list-item-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.documents-search-bar-input {
+  flex: 1;
+  border: none;
+  outline:none;
+}
+
+.documents-upload-button {
+  width: 150px;
+  height: var(--documents-header-element-height);
+  background-color: var(--blue-color);
+  border-radius: var(--rectuangular-border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.documents-upload-button-text {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.document-viewer {
+  flex: 1;
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.message {
+  border-radius: var(--rectuangular-border-radius);
+  display: flex;
+  padding: 20px;
+}
+
+.message:not(:first-child) {
+  margin-top: 20px;
+}
+
+.user-message {
+  background-color: var(--user-message-color);
+}
+
+.computer-message {
+  background-color: var(--computer-message-color);
+  color: white;
+}
+
+.message-content {
+  flex: 1;
+  align-self: center;
+  word-break: break-all;
+}
+
+.message-icon {
+  font-size: 2em;
+  margin-right: 20px;
+}
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.chat-footer-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: var(--rectuangular-border-radius);
+  height: var(--chat-footer-element-height);
+  padding: 20px;
+  margin-right: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.chat-footer-button {
+  height: var(--chat-footer-element-height);
+  width: 100px;
+  border: none;
+  border-radius: var(--rectuangular-border-radius);
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
