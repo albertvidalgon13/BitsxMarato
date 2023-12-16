@@ -13,9 +13,9 @@
   --blue-color: #3498db; /* Change the blue color */
   --nav-font-size: 1.2em;
   --rectangular-border-radius: 8px; /* Change the border radius */
-  --box-shadow: rgba(100, 100, 100, 0.2) 0px 8px 24px; /* Change the box shadow */
+  --box-shadow: #3498db; /* Change the box shadow */
   --user-message-color: #f0f0f0; /* Change the user message color */
-  --computer-message-color: #777; /* Change the computer message color */
+  --computer-message-color: rgb(127, 70, 163); /* Change the computer message color */
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 
   margin: 0;
   padding: 0;
-  background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-salud-sexual-dibujado-mano_23-2149042548.jpg?w=1380&t=st=1702750771~exp=1702751371~hmac=1a35ee2a94e894739d4755f2fb208e31f9a22527b0160db446ce1cfad3645e89');
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-salud-sexual-dibujado-mano_23-2149042548.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,72 +128,6 @@ body {
   padding: 0 30px;
 }
 
-.documents-list-item-link {
-  flex: 1;
-  text-decoration: none;
-  color: var(--font-color);
-}
-
-.documents-list-item-link:hover {
-  color: var(--blue-color);
-}
-
-.documents-list-item-delete-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.documents-list-item-delete-button > svg{
-  display: block;
-  font-size: 1.75em;
-}
-
-.documents-list-item-delete-button > svg:hover{
-  color: red;
-}
-
-.documents-search-bar {
-  border: none;
-  width: 400px;
-  height: var(--documents-header-element-height);
-  border-radius: 50px;
-  background-color: var(--documents-list-item-color);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  box-shadow: var(--box-shadow);
-}
-
-.documents-search-bar-input {
-  flex: 1;
-  border: none;
-  outline:none;
-}
-
-.documents-upload-button {
-  width: 150px;
-  height: var(--documents-header-element-height);
-  background-color: var(--blue-color);
-  border-radius: var(--rectuangular-border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.documents-upload-button-text {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-.document-viewer {
-  flex: 1;
-}
 
 .chat-container {
   flex: 1;
@@ -258,6 +192,22 @@ body {
   cursor: pointer;
 }
 
+.option-0 {
+  background-color: #4285F4;
+}
+
+.option-1 {
+  background-color: #DB4437;
+}
+
+.option-2 {
+  background-color: #F4B400;
+}
+
+.option-3 {
+  background-color: #0F9D58;
+}
+
 .main-content-container {
  /* background-image: url("https://img.freepik.com/fotos-premium/papel-pintado-platano-sobre-fondo-rosa_33736-4252.jpg");*/
   display: grid;
@@ -287,12 +237,12 @@ body {
 }
 
 .text-container h1 {
-  color: #333; /* Color del título */
+  color: #000000; /* Color del título */
   margin-bottom: 10px;
 }
 
 .text-container p {
-  color: #555; /* Color del texto */
+  color: #000000; /* Color del texto */
   margin-top: 30px;
 }
 
@@ -303,7 +253,7 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: #000000;
   text-align: center;
 }
 
@@ -322,7 +272,7 @@ h3 {
 }
 
 p {
-  color: #555;
+  color: #000000;
 }
 
 .quiz-container {
@@ -349,6 +299,7 @@ p {
 }
 
 .option {
+  color: white;
   margin: 8px;
   padding: 10px;
   border: 1px solid #eb06f3;
