@@ -4,14 +4,10 @@ WORKDIR /usr/src/frontend
 
 COPY package*.json ./
 
-RUN npm install -g n
-
-RUN n stable
+RUN npm install
 
 COPY . .
 
-RUN ls
-
 EXPOSE 3000
 
-CMD ["node", "src/index.js"]
+CMD ["npm", "start"]
