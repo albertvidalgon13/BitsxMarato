@@ -1,32 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/quiz.css';
 
 const QuizSelector = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const navigate = useNavigate();
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-  };
-
-  const handleContinue = () => {
-    // Redirect based on the selected option
-    switch (selectedOption) {
-      case 'option1':
-        navigate('/quiz/ITS');
-        break;
-      case 'option2':
-        navigate('/quiz/Pornografia');
-        break;
-      case 'option3':
-        navigate('/quiz/Anticoncepció');
-        break;
-      default:
-        // Handle default case or show an error message
-        break;
-    }
-  };
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [showTransition, setShowTransition] = useState(false);
+    const navigate = useNavigate();
+  
+    useEffect(() => {
+      if (showTransition) {
+        setTimeout(() => {
+          switch (selectedOption) {
+            case 'option1':
+              navigate('/quiz/ITS');
+              break;
+            case 'option2':
+              navigate('/quiz/Pornografia');
+              break;
+            case 'option3':
+              navigate('/quiz/Anticoncepció');
+              break;
+            default:
+              // Handle default case or show an error message
+              break;
+          }
+        }, 1500); // Adjust the timeout based on your animation duration
+      }
+    }, [showTransition, selectedOption, navigate]);
+  
+    const handleOptionSelect = (option) => {
+      setSelectedOption(option);
+    };
+  
+    const handleContinue = () => {
+      setShowTransition(true);
+    };
 
   return (
     <div className="container">
@@ -51,6 +59,9 @@ const QuizSelector = () => {
           <span>Anticoncepció</span>
         </button>
       </div>
+      {showTransition && (
+        <div className="png-transition" />
+      )}
       <button
         className={`button continue ${!selectedOption ? 'disabled' : ''}`}
         onClick={handleContinue}
