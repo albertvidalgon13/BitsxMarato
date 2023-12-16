@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: ./frontend/
+    ports:
+      - "3000:3000"
+    working_dir: /usr/src/frontend
+    depends_on:
+      - api
+
+  api:
+    build: ./backend/
+    ports:
+      - "3001:3001"
+    working_dir: /usr/src/backend
+  
+  ai:
+    build: ./IA/chatgpt-retrieval/
+    ports:
+      - "5000:5000"
+    working_dir: /usr/src/AI
