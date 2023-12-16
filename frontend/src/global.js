@@ -1,3 +1,3 @@
-const backendURL = "http://localhost:3001";
+const backendURL = "http://api:3001";
 
 export default backendURL;
