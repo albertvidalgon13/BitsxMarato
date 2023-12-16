@@ -31,7 +31,7 @@ if PERSIST and os.path.exists("persist"):
     index = VectorStoreIndexWrapper(vectorstore=vectorstore)
 else:
     # loader = TextLoader("data/data.txt") # Use this line if you only need data.txt
-    loader = DirectoryLoader("../../backend/documents/")
+    loader = DirectoryLoader("/usr/src/AI/documents")
     if PERSIST:
         index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory": "persist"}).from_loaders([loader])
     else:
