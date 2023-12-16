@@ -6,6 +6,7 @@ import DocumentPage from './components/DocumentPage';
 import ChatPage from './components/ChatPage';
 import MainContent from './components/MainContent'; // Importa el componente principal
 import FAQ from './components/Faqs';
+import Quiz from './components/Quiz';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='documents' element={<DocumentsSection />} />
           <Route path='documents/:name' element={<ChatPage />}/>
           <Route path='chat' element={<ChatPage />} />
+          <Route path='quiz/:topic' element={<Quiz />} />
         </Route>
       </Routes>
     </BrowserRouter>
