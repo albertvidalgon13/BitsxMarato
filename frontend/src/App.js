@@ -2,10 +2,9 @@ import './App.css';
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import DocumentsSection from './components/DocumentsSection';
-import DocumentPage from './components/DocumentPage';
 import QuizSelector from './components/QuizSelector';
 import ChatPage from './components/ChatPage';
-import MainContent from './components/MainContent'; // Importa el componente principal
+import MainContent from './components/MainContent';
 import FAQ from './components/Faqs';
 import Quiz from './components/Quiz';
 

@@ -84,7 +84,7 @@ app.get('/general_chat', async (req, res) => {
   let question = req.query.question;
   if(question === undefined) return res.status(400).send('The question parameter is missing. Example of the use of the endpoint: http://localhost:3001/general_chat?question=Test');
   if(question === '') return res.status(400).send('The question parameter is empty.');
-  const flaskApiUrl = 'http://ai:5000/api/ask';
+  const flaskApiUrl = 'http://localhost:5000/api/ask';
 
   try {
     // Make a POST request to the Flask API

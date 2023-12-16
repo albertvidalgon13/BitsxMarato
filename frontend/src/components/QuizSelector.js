@@ -12,13 +12,13 @@ const QuizSelector = () => {
         setTimeout(() => {
           switch (selectedOption) {
             case 'option1':
-              navigate('/quiz/ITS');
+              navigate('/quiz/its');
               break;
             case 'option2':
-              navigate('/quiz/Pornografia');
+              navigate('/quiz/pornografia');
               break;
             case 'option3':
-              navigate('/quiz/Anticoncepció');
+              navigate('/quiz/anticoncepcio');
               break;
             default:
               // Handle default case or show an error message

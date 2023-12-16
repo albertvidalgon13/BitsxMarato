@@ -50,28 +50,32 @@
     z-index: 1;
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text;
-    mask-image: url('../img/quizz/textures/letters.jpg'); /* Apply texture as a mask to the text */
-    mask-mode: luminance; /* Use the luminance of the mask */
+    mask-image: url('../img/quizz/textures/letters.jpg');
+    color: black;
+    text-shadow: 
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px -2px 0 white; 
   }
 
   .option1 {
-      /* background-color: #3498db; */
-      color: #fff;
+      /* color: #e0cdcc; */
       background-image: url('../img/quizz/ITS.png');
   }
   
   .option2 {
     background-image: url('../img/quizz/porn.png');
-    color: #fff;
+    /* color: #e0cdcc; */
   }
   
   .option3 {
     background-image: url('../img/quizz/contraconception.png');
-    color: #fff;
+    /* color: #e0cdcc; */
   }
   
   .selected {
-    border: 2px solid #fff;
+    border: 3px solid #fc918b;
   }
   
   .continue {
