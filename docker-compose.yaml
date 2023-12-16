@@ -2,9 +2,6 @@ version: '3'
 services:
   web:
     build: ./frontend/
-    networks: 
-      poppit:
-        ipv4_address: 172.23.0.3
     ports:
       - "3000:3000"
     working_dir: /usr/src/frontend
@@ -13,25 +10,12 @@ services:
 
   api:
     build: ./backend/
-    networks: 
-      poppit:
-        ipv4_address: 172.23.0.4
     ports:
       - "3001:3001"
     working_dir: /usr/src/backend
   
   ai:
     build: ./IA/chatgpt-retrieval/
-    networks: 
-      poppit:
-        ipv4_address: 172.23.0.5
     ports:
       - "5000:5000"
     working_dir: /app
-
-networks:
-  poppit:
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.23.0.0/16
