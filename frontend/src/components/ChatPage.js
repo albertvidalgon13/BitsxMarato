@@ -8,7 +8,6 @@ import backendURL from "../global";
 
 function ChatPage () {
     const [messages, setMessages] = useState([]);
-    // This one is for error messages
     const [message, setMessage] = useState([]);
     const [question, setQuestion] = useState('');
 

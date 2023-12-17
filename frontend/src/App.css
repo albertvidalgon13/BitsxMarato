@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --font-family: 'AnotherFont', sans-serif; /* Change the font family */
-  /*--background-color: #ffe6e6;  Change the background color */
+  --font-family: 'AnotherFont', sans-serif; 
+  
   
 
 
-  --font-color: #000000; /* Change the font color */
-  --side-color: #ffe6e6; /* Change the side color */
-  --nav-hr-color: #c1ee45; /* Change the nav-hr color */
-  --documents-list-item-color: #eaeaea; /* Change the documents-list-item color */
-  --blue-color: #3498db; /* Change the blue color */
+  --font-color: #000000; 
+  --side-color: #ffe6e6; 
+  --nav-hr-color: #c1ee45;
+  --blue-color: #3498db; 
   --nav-font-size: 1.2em;
-  --rectangular-border-radius: 8px; /* Change the border radius */
-  --box-shadow: #3498db; /* Change the box shadow */
-  --user-message-color: #f0f0f0; /* Change the user message color */
-  --computer-message-color: #7743a8; /* Change the computer message color */
+  --rectangular-border-radius: 8px; 
+  --box-shadow: #3498db; 
+  --user-message-color: #f0f0f0; 
+  --computer-message-color: #a181bf; 
 }
 
 * {
@@ -29,11 +28,11 @@ body {
 
   margin: 0;
   padding: 0;
-  background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-salud-sexual-dibujado-mano_23-2149042548.jpg');
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-salud-sexual-dibujado-mano_23-2149042548.jpg?w=1480&t=st=1702777434~exp=1702778034~hmac=6f6d8e477912191a6438ca1b11e42e29e41114bb502efcd8a1a4c31d2fc734e6');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Tamaño de la ventana visible */
+  height: 100vh; 
 
 }
 
@@ -116,29 +115,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.documents-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.documents-list {
-  flex: 1;
-  overflow-y: scroll;
-}
-
-.documents-list-item {
-  display: block;
-  height: 70px;
-  border-radius: var(--rectuangular-border-radius);
-  background-color: var(--documents-list-item-color);
-  margin-top: 20px;
-  box-shadow: var(--box-shadow);
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-}
-
 
 .chat-container {
   flex: 1;
@@ -227,10 +203,9 @@ body {
 }
 
 .main-content-container {
- /* background-image: url("https://img.freepik.com/fotos-premium/papel-pintado-platano-sobre-fondo-rosa_33736-4252.jpg");*/
   display: grid;
-  grid-template-rows: auto 1fr; /* Dos filas: una para la imagen y otra para el texto */
-  gap: 20px; /* Espacio entre las filas */
+  grid-template-rows: auto 1fr; 
+  gap: 20px; 
 }
 
 .image-container {
@@ -255,12 +230,12 @@ body {
 }
 
 .text-container h1 {
-  color: #000000; /* Color del título */
+  color: #000000; 
   margin-bottom: 10px;
 }
 
 .text-container p {
-  color: #000000; /* Color del texto */
+  color: #000000; 
   margin-top: 30px;
 }
 
@@ -340,21 +315,21 @@ p {
 
 /**/
 .quiz-container {
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center; 
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
-/* Estilos para la cuadrícula de botones */
+
 .options-grid {
   margin-top:10px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-  gap: 10px; /* Espacio entre botones */
-  justify-content: center; /* Centra horizontalmente los botones */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; 
+  justify-content: center;
 }
 
-/* Estilos para los botones de las opciones */
+
 .button-option {
   padding: 15px 30px;
   font-size: 16px;
@@ -371,13 +346,13 @@ p {
   background-color: #857396;
 }
 
-/* Estilos para las clases 'correct' y 'selected' */
+
 .correct {
-  background-color: #4caf50 !important; /* Color de fondo para respuesta correcta */
+  background-color: #4caf50 !important;
 }
 
 .selecte-test {
-  background-color: #ff0000; /* Color de fondo para opción seleccionada */
+  background-color: #ff0000;
 }
 
 .askbut {

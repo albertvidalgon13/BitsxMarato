@@ -22,10 +22,9 @@ const QuizSelector = () => {
               navigate('/quiz/anticoncepcio');
               break;
             default:
-              // Handle default case or show an error message
               break;
           }
-        }, 1500); // Adjust the timeout based on your animation duration
+        }, 1500);
       }
     }, [showTransition, selectedOption, navigate]);
   

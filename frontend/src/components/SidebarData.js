@@ -11,7 +11,7 @@ export const SidebarData = [
     },
     {
         title: 'FAQs',
-        path: '/faq',  // Puedes cambiar la ruta si es necesario
+        path: '/faq',
         icon: <BsIcons.BsQuestionCircleFill />,
     },
     {
@@ -21,8 +21,8 @@ export const SidebarData = [
     },
     {
         title: 'Quiz',
-        path: '/quiz', // Ajusta la ruta según tus necesidades
-        icon: <MdIcons.MdQuiz />, // Ajusta el nombre del icono según el que estés utilizando
+        path: '/quiz',
+        icon: <MdIcons.MdQuiz />,
     }
 ]
 

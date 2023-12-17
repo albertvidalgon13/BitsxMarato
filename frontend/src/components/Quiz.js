@@ -91,7 +91,7 @@ const Quiz = () => {
   const { topic } = useParams();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false); // Estado para mostrar la respuesta correcta
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
   const currentQuestion = questionsByTopic[topic][currentQuestionIndex];
@@ -111,12 +111,11 @@ const Quiz = () => {
   const handleNextQuestion = () => {
     if (currentQuestionIndex + 1 < questionsByTopic[topic].length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setShowCorrectAnswer(false); // Ocultar la respuesta correcta al pasar a la siguiente pregunta
-      setSelectedOption(null); // Reiniciar la opción seleccionada
+      setShowCorrectAnswer(false);
+      setSelectedOption(null);
     } else {
       alert(`Quiz completat! La teva puntuació: ${score}/${questionsByTopic[topic].length}`);
       navigate("/quiz");
-      // Aquí puedes redirigir a una página de resultados o realizar alguna acción adicional
     }
   };
 

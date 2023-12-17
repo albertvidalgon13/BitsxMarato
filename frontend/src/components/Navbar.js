@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from 'react-router-dom';
 import { SidebarData } from "./SidebarData";
-import MainContent from './MainContent'; // Importa el componente principal
+import MainContent from './MainContent';
 
 
 function Navbar() {

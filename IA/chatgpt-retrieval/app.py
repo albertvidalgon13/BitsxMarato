@@ -30,7 +30,7 @@ def construct_index(directory_path):
 def chatbot(input_text):
   index = GPTSimpleVectorIndex.load_from_disk('index.json')
   response = index.query(input_text, response_mode="compact")
-  return response.response
+  return response
 
 index = construct_index("docs")
 
@@ -42,7 +42,8 @@ def api_ask():
         query = data.get('question', None)
         if query is None:
             return jsonify({'error': 'Missing question in request'})
-        answer = chatbot(query)
+        response = chatbot(query)
+        answer = response.response
         return jsonify({'source_file_path': "Trusted info", 'answer': answer})
     else:
         return jsonify({'error': 'Invalid request method'})

@@ -1,4 +1,3 @@
-// FAQ.js
 import React from 'react';
 
 const FAQ = () => {
