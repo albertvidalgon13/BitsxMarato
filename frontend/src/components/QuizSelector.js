@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/quiz.css';
+import '../styles/movement.css'
 
 const QuizSelector = () => {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -38,7 +39,7 @@ const QuizSelector = () => {
 
   return (
     <div className="container">
-      <h1>Escull una opció</h1>
+      <h1>Aprenem sobre...</h1>
       <div className="button-container">
         <button
           className={`button option1 ${selectedOption === 'option1' ? 'selected' : ''}`}
@@ -67,7 +68,7 @@ const QuizSelector = () => {
         onClick={handleContinue}
         disabled={!selectedOption}
       >
-        <span>Continue</span>
+        <span>Juguem!</span>
       </button>
     </div>
   );
