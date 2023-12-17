@@ -15,7 +15,7 @@
   --rectangular-border-radius: 8px; /* Change the border radius */
   --box-shadow: #3498db; /* Change the box shadow */
   --user-message-color: #f0f0f0; /* Change the user message color */
-  --computer-message-color: rgb(127, 70, 163); /* Change the computer message color */
+  --computer-message-color: #7743a8; /* Change the computer message color */
 }
 
 * {
@@ -378,4 +378,27 @@ p {
 
 .selecte-test {
   background-color: #ff0000; /* Color de fondo para opción seleccionada */
+}
+
+.askbut {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #7743a8;
+  border-radius: 8px;
+  border-width: 3px;
+   background-size: contain;
+   margin-top: 5px;
+ background-color: #be647f;
+}
+.askpad{
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #7743a8;
+  border-radius: 8px;
+  border-width: 3px;
+   background-size: contain;
+   margin-top: 5px;
+ background-color: white;
 }

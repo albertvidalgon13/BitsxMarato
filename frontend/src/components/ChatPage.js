@@ -46,8 +46,8 @@ function ChatPage () {
             </div>
             <p style={{color: 'red'}}>{message}</p>
             <div className="chat-footer">
-                <input className="chat-footer-input" type="text" placeholder="Ask anything..." value={question} onChange={(e) => setQuestion(e.target.value)}></input>
-                <button className="chat-footer-button" onClick={handleAskSubmit}><PiIcons.PiPaperPlaneTilt />Ask</button>
+                <input className="chat-footer-input askpad" type="text" placeholder="Ask anything..." value={question} onChange={(e) => setQuestion(e.target.value)}></input>
+                <button className="chat-footer-button askbut" onClick={handleAskSubmit}><PiIcons.PiPaperPlaneTilt />Ask</button>
             </div>
         </>
     );
