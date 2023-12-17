@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const questionsByTopic = {
   its: [
@@ -84,44 +86,68 @@ const questionsByTopic = {
 
 
 const Quiz = () => {
-    const { topic } = useParams();
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [score, setScore] = useState(0);
-  
-    const currentQuestion = questionsByTopic[topic][currentQuestionIndex];
-  
-    const handleAnswerClick = (selectedAnswer) => {
-      if (selectedAnswer === currentQuestion.correctAnswer) {
-        setScore(score + 1);
-      }
-  
-      if (currentQuestionIndex + 1 < questionsByTopic[topic].length) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-      } else {
-        alert(`Quiz completat! La teva puntuació: ${score}/${questionsByTopic[topic].length}`);
-      }
-    };
-  
-    return (
-      <div className="quiz-container">
-        <h2>{`Quiz: ${topic.toUpperCase()}`}</h2>
-        {currentQuestion && (
-          <div className="question-container">
-            <p>{`Question ${currentQuestion.id}: ${currentQuestion.question}`}</p>
-            <ul className="options-list">
-              {currentQuestion.options.map((option, index) => (
-                <li
+  const navigate = useNavigate();
+
+  const { topic } = useParams();
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false); // Estado para mostrar la respuesta correcta
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const currentQuestion = questionsByTopic[topic][currentQuestionIndex];
+
+  const history = useParams();
+
+
+  const handleAnswerClick = (selectedAnswer) => {
+    setSelectedOption(selectedAnswer);
+    setShowCorrectAnswer(true);
+
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      setScore(score + 1);
+    }
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex + 1 < questionsByTopic[topic].length) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setShowCorrectAnswer(false); // Ocultar la respuesta correcta al pasar a la siguiente pregunta
+      setSelectedOption(null); // Reiniciar la opción seleccionada
+    } else {
+      alert(`Quiz completat! La teva puntuació: ${score}/${questionsByTopic[topic].length}`);
+      navigate("/quiz");
+      // Aquí puedes redirigir a una página de resultados o realizar alguna acción adicional
+    }
+  };
+
+  return (
+    <div className="quiz-container">
+      <h2 className="title-text-2">{`Quiz: ${topic.toUpperCase()}`}</h2>
+      {currentQuestion && (
+        <div className="question-container">
+          <p>{`Pregunta ${currentQuestion.id}: ${currentQuestion.question}`}</p>
+          <div className="options-grid">
+            {currentQuestion.options.map((option, index) => (
+              <button
                 key={index}
                 onClick={() => handleAnswerClick(option)}
-                className={'option option-1'}
-              > {option}
-              </li>
-              ))}
-            </ul>
+                className={`button-option option-1 ${showCorrectAnswer && option === currentQuestion.correctAnswer ? 'correct' : ''} ${selectedOption === option ? 'selecte-test' : ''}`}
+              >
+                {option}
+              </button>
+            ))}
           </div>
-        )}
-      </div>
-    );
-  };
+          {showCorrectAnswer && (
+            <div className="answer-feedback">
+              <p>Resposta correcta: {currentQuestion.correctAnswer}</p>
+              <button className="button-quizz-pregunta" onClick={handleNextQuestion}>Següent Pregunta</button>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
 
 export default Quiz;

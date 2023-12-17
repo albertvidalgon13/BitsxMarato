@@ -43,6 +43,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+
   }
 
   .button-text {
@@ -81,6 +82,10 @@
   
   .selected {
     border: 3px solid #fc918b;
+    background-color: yellow;
+  }
+  .selected-2 {
+    border: 3px solid #ff0d00;
   }
   
   .continue {
@@ -97,4 +102,12 @@
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); 
     font-size: 40px;
     font-weight: bold;
+  }
+
+  .title-text-2{
+    font-size: 28px;
+    font-weight: bold;
+    color: #3498db;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }

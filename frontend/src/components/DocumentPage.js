@@ -28,7 +28,7 @@ function DocumentPage () {
             <div>
                 <Link to={"/documents"}> Return to the documents list</Link>
                 <p>{message}</p>
-                <h1>{name}</h1>
+                <h1 className="title-text">{name}</h1>
             </div>
             <object className="document-viewer" data={documentURL} type="application/pdf">
 

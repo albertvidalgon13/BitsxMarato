@@ -77,6 +77,17 @@ body {
   display: block;
 }
 
+.button-quizz-pregunta {
+   padding: 15px;
+   font-size: 18px;
+   font-weight: bold;
+    border: none;
+    background-size: contain;
+    border-radius: 8px;
+    margin-top: 5px;
+  background-color: #be647f;
+}
+
 .nav-link {
   color: var(--font-color);
   display: block;
@@ -193,19 +204,26 @@ body {
 }
 
 .option-0 {
-  background-color: #4285F4;
+  background-color: #5a8cdd;
 }
 
 .option-1 {
-  background-color: #DB4437;
+  background-color: #7743a8;
+}
+
+.correct {
+  background-color: #09d858;
+}
+.incorrect {
+  background-color: #e60505;
 }
 
 .option-2 {
-  background-color: #F4B400;
+  background-color: #eccb6f;
 }
 
 .option-3 {
-  background-color: #0F9D58;
+  background-color: #694062;
 }
 
 .main-content-container {
@@ -289,6 +307,12 @@ p {
 .question-container {
   margin-bottom: 20px;
 }
+.question {
+  margin-bottom: 10px;
+}
+.answer-feedback {
+  margin-top: 10px;
+}
 
 .options-list {
   list-style: none;
@@ -302,7 +326,7 @@ p {
   color: white;
   margin: 8px;
   padding: 10px;
-  border: 1px solid #eb06f3;
+  border: 1px solid #000000;
   border-radius: 8px;
   border-width: 3px;
   cursor: pointer;
@@ -311,4 +335,47 @@ p {
 
 .option:hover {
   background-color: #e0e0e0;
+}
+
+
+/**/
+.quiz-container {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para la cuadrícula de botones */
+.options-grid {
+  margin-top:10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 10px; /* Espacio entre botones */
+  justify-content: center; /* Centra horizontalmente los botones */
+}
+
+/* Estilos para los botones de las opciones */
+.button-option {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #7743a8;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button-option:hover {
+  background-color: #857396;
+}
+
+/* Estilos para las clases 'correct' y 'selected' */
+.correct {
+  background-color: #4caf50 !important; /* Color de fondo para respuesta correcta */
+}
+
+.selecte-test {
+  background-color: #ff0000; /* Color de fondo para opción seleccionada */
 }

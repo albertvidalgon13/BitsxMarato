@@ -4,7 +4,7 @@ import React from 'react';
 const FAQ = () => {
   return (
     <div className="faq-container">
-    <h1>Pregunes freqüents</h1>
+    <h1 className="title-text">Preguntes freqüents</h1>
     <div className="faq-item">
     <h3>Què és la disfunció erèctil (ED) i quins són els seus factors de risc?</h3>
     <p>L'ED és la incapacitat recurrent d'aconseguir o mantenir una erecció prou ferma per mantenir una relació sexual satisfactòria. Els factors de risc inclouen l'edat, l'estrès, malalties cròniques com diabetis o hipertensió, i l'estil de vida, com el consum de tabac o l'alcohol.</p>
