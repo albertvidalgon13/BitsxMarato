@@ -7,7 +7,7 @@ const MainContent = () => {
       <div className="image-container">
         <img src="https://cerca.cat/wp-content/uploads/2022/08/Research-blau.png" width="200px" alt="Foto no se ve" />
       </div>
-      <h1>SexEd+: La sexualitat del futur</h1>
+      <h1 className="title-text">SexEd+: La sexualitat del futur</h1>
       <div className="text-container">
         <p>La sexualitat entre joves abasta qüestions complexes que afecten significativament el seu benestar general. Una educació sexual inadequada sovint els deixa exposats a diversos reptes, com pot ser el risc de contraure malalties de transmissió sexual (ITS).</p>
         <p>A més, les discussions limitades sobre orientacions sexuals diverses i identitats de gènere perpetuen l'estigmatització i la discriminació, especialment contra les persones de la comunitat LGBTQ+.</p>

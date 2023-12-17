@@ -39,25 +39,25 @@ const QuizSelector = () => {
 
   return (
     <div className="container">
-      <h1>Aprenem sobre...</h1>
+      <h1 className="title-text">Aprenem sobre...</h1>
       <div className="button-container">
         <button
           className={`button option1 ${selectedOption === 'option1' ? 'selected' : ''}`}
           onClick={() => handleOptionSelect('option1')}
         >
-          <span>ITS</span>
+          <span className="button-text">ITS</span>
         </button>
         <button
           className={`button option2 ${selectedOption === 'option2' ? 'selected' : ''}`}
           onClick={() => handleOptionSelect('option2')}
         >
-          <span>Pornografia</span>
+          <span className="button-text">Pornografia</span>
         </button>
         <button
           className={`button option3 ${selectedOption === 'option3' ? 'selected' : ''}`}
           onClick={() => handleOptionSelect('option3')}
         >
-          <span>Anticoncepció</span>
+          <span className="button-text">Anticoncepció</span>
         </button>
       </div>
       {showTransition && (
@@ -68,7 +68,7 @@ const QuizSelector = () => {
         onClick={handleContinue}
         disabled={!selectedOption}
       >
-        <span>Juguem!</span>
+        <span className="button-continue">Juguem!</span>
       </button>
     </div>
   );

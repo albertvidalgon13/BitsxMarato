@@ -3,15 +3,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* 100% of the viewport height */
+    height: 100vh;
   }
   
   .button-container {
     display: flex;
     flex-direction: column;
     width: 75%;
-    max-width: 400px; /* Set a maximum width if needed */
-    height: 75vh; /* 75% of the viewport height */
+    max-width: 400px;
+    height: 75vh;
   }
   
   .button:before {
@@ -21,21 +21,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid #fff; /* Border color */
-    border-radius: 8px; /* Border radius, should match the button's border radius */
+    border: 2px solid #fff;
+    border-radius: 8px;
     z-index: 0;
   }
 
   .button {
     flex: 1;
-    padding: 20px; /* Adjust the padding to change button size */
+    padding: 20px;
     font-size: 18px;
     font-weight: bold;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-size: contain; /* Resize the background image to show completely */
-    background-position: center; /* Center the background image */
+    background-size: contain;
+    background-position: center;
     border-radius: 8px;
     margin: 8px;
     display: flex;
@@ -44,13 +44,8 @@
     position: relative;
     overflow: hidden;
   }
-  
-  .button span {
-    position: relative;
-    z-index: 1;
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text;
-    mask-image: url('../img/quizz/textures/letters.jpg');
+
+  .button-text {
     color: black;
     text-shadow: 
     -2px -2px 0 white,
@@ -58,20 +53,30 @@
     -2px 2px 0 white,
     2px -2px 0 white; 
   }
+  
+  .continue-text {
+    color: black
+  }
+  
+  
+  .button span {
+    position: relative;
+    z-index: 1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    mask-image: url('../img/quizz/textures/letters.jpg');
+  }
 
   .option1 {
-      /* color: #e0cdcc; */
       background-image: url('../img/quizz/ITS.png');
   }
   
   .option2 {
     background-image: url('../img/quizz/porn.png');
-    /* color: #e0cdcc; */
   }
   
   .option3 {
     background-image: url('../img/quizz/contraconception.png');
-    /* color: #e0cdcc; */
   }
   
   .selected {
@@ -87,3 +92,9 @@
     cursor: not-allowed;
   }
   
+  .title-text {
+    color: #fe5353; /* White text color for contrast */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); 
+    font-size: 40px;
+    font-weight: bold;
+  }
